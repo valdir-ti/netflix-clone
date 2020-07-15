@@ -3,14 +3,14 @@ import './App.css';
 
 import Row from './Row';
 import BannerComponent from './BannerComponent';
+import Navbar from './Navbar';
 import requests from './requests';
 
 function App() {
   return (
     <div className="app">
-
+      <Navbar />
       <BannerComponent />
-
       <Row 
         title="NETFLIX ORIGINALS" 
         fetchUrl={requests.fetchNetflixOriginals}
@@ -21,7 +21,7 @@ function App() {
       <Row title="Actions Movies" fetchUrl={requests.fetchActionsMovies}/>
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
-      {/* <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/>       */}
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/>      
 
     </div>
   );
