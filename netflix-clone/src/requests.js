@@ -1,4 +1,4 @@
-const API_KEY = "bddef262b1fdf275108c5e4217511f38";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const GENRE = "&with_genres=";
 
 // https://api.themoviedb.org/3/movie/550?api_key=bddef262b1fdf275108c5e4217511f38
@@ -12,6 +12,6 @@ const requests = {
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}${GENRE}27`,
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}${GENRE}10749`,
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}${GENRE}99`,
-}
+};
 
 export default requests;
